@@ -21,13 +21,13 @@ body{
 
 header{
     text-align: center;
-    margin-top: 20%;
-    font-size: 1.1em;
+    margin: 0px 30% 0px 30%;
+    font-size: 1.3em;
 }
 
 main section{
     text-align: center;
-    margin-top: 15%;
+    margin-bottom: 20%;
 }
 
 /*
