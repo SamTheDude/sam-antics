@@ -1,0 +1,45 @@
+/*
+Styles file for Rizzle Spizzle's site, written by Samuel Kent
+Started on 27th December 2019
+(Not finished)
+*/
+
+/*
+=============================
+===== Mobile CSS Styles =====
+=============================
+*/
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    font-size: 1.8em;
+    font-family: "Ubuntu", sans-serif;
+}
+
+header{
+    text-align: center;
+    margin-top: 20%;
+}
+
+/*
+=============================
+===== Tablet CSS Styles =====
+=============================
+*/
+
+@media only screen and (min-width: 500px) {
+
+}
+
+/*
+==============================
+===== Desktop CSS Styles =====
+==============================
+*/
+
+@media only screen and (min-width: 800px) {
+
+}

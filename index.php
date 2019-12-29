@@ -26,14 +26,6 @@
         Sam Antics
     </header>
 
-    <nav>
-       <ul>
-           <li onclick="window.location.href = '#about';">About Me</li>
-           <li onclick="window.location.href = '#videos';">Personal Projects</li>
-           <li onclick="window.location.href = '#art';">University Work</li>
-       </ul>
-    </nav>
-
     <main>
 
     </main>
