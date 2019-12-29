@@ -27,7 +27,8 @@ header{
 
 main section{
     text-align: center;
-    padding: 20%;
+    padding: 10%;
+    transition: linear 120ms;
 }
 
 main section:hover{
