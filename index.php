@@ -15,8 +15,8 @@
     <meta charset="utf-8">
 
     <!-- Link to the stylesheet and javascript. -->
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <script type="text/javascript" src="/script.js"></script>
 </head>
 
 <!-- All the displayed HTML is in here -->
