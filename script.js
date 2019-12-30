@@ -39,7 +39,14 @@ function getDir(x, y, lastDirection){
 }
 
 //Function to control a single line's movement
-function lineMove(lineID, segments, headLocation, segment, lastDirection, colour){
+function lineMove(lineID, segments, headLocation, segment, lastDirection, colour, fastItterations){
+    //Set time period.
+    let time = 300;
+    if(fastItterations > 0){
+        time = 10;
+        fastItterations = fastItterations - 1;
+    }
+
     //Get a random direction to move in.
     let direction = getDir(headLocation[0], headLocation[1], lastDirection);
 
@@ -60,10 +67,10 @@ function lineMove(lineID, segments, headLocation, segment, lastDirection, colour
     lineSegment.style.stroke = colour;
 
     //Draw the line in slowly.
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < time; i++) {
         setTimeout(function() {
             //Calculate the new head location
-            let newHeadTemp = [direction[0] * (distance * (i/300)) + headLocation[0], direction[1] * (distance * (i/300)) + headLocation[1]];
+            let newHeadTemp = [direction[0] * (distance * (i/time)) + headLocation[0], direction[1] * (distance * (i/time)) + headLocation[1]];
             lineSegment.setAttribute("x1", headLocation[0]);
             lineSegment.setAttribute("y1", headLocation[1]);
             lineSegment.setAttribute("x2", newHeadTemp[0]);
@@ -95,10 +102,10 @@ function lineMove(lineID, segments, headLocation, segment, lastDirection, colour
     let prevDirection = [(trailingX-trailingX2)/distance, (trailingY-trailingY2)/distance]
 
     //Draw out trailing line.
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < time; i++) {
         setTimeout(function() {
-            lastLineSegment.setAttribute("x1", trailingX + (-prevDirection[0] * distance * (i/300)));
-            lastLineSegment.setAttribute("y1", trailingY + (-prevDirection[1] * distance * (i/300)));
+            lastLineSegment.setAttribute("x1", trailingX + (-prevDirection[0] * distance * (i/time)));
+            lastLineSegment.setAttribute("y1", trailingY + (-prevDirection[1] * distance * (i/time)));
             lastLineSegment.setAttribute("x2", trailingX2);
             lastLineSegment.setAttribute("y2", trailingY2);
         }, i);
@@ -112,8 +119,8 @@ function lineMove(lineID, segments, headLocation, segment, lastDirection, colour
 
     //Draw next line after a second.
     setTimeout(function() {
-        lineMove(lineID, segments, newHead, segment, direction, colour);
-    }, 300);
+        lineMove(lineID, segments, newHead, segment, direction, colour, fastItterations);
+    }, time);
 }
 
 //Produce a randomised colour code.
@@ -147,7 +154,7 @@ function backgroundAnimate(concurrentLines, segments) {
     animationDump.innerHTML = concatinatedText;
 
     for (let i = 0; i < concurrentLines; i++) {
-        lineMove(i, segments, [Math.round(window.screen.width/2), Math.round(window.screen.height/2)], 0, [0, 0], randomColour());
+        lineMove(i, segments, [Math.round(window.screen.width/2), Math.round(window.screen.height/2)], 0, [0, 0], randomColour(), 8);
     }
 }
 
