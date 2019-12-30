@@ -23,12 +23,14 @@ header{
     text-align: center;
     padding: 30% 0px 30% 0px;
     font-size: 1.3em;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 main section{
     text-align: center;
     padding: 10%;
     transition: ease-in-out 220ms;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 main section:hover{
@@ -36,9 +38,16 @@ main section:hover{
 }
 
 /* Styling for the SVG */
+svg#animation-dump{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
 svg line.line{
     stroke:rgb(255,0,0);
-    stroke-width:3;
+    stroke-width:1;
+
 }
 
 /*
