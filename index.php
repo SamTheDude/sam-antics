@@ -27,15 +27,11 @@
 <!-- All the displayed HTML is in here -->
 
 <body>
-
     <header>
         Sam Antics
     </header>
 
     <main>
-        <div>
-            <!-- Where the Javascript interacts with the page -->
-        </div>
         <section>
             About Me
         </section>
@@ -51,5 +47,9 @@
         
     </footer>
 </body>
+
+<svg id="animation-dump" width="100%" height="100%">
+    <line x1="0" y1="0" x2="0" y2="0" class="line"/>
+</svg>
 
 </html>
