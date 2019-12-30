@@ -3,11 +3,13 @@
 
 //Wait for document to load
 document.addEventListener("DOMContentLoaded", function(){
+    //Get the height of the screen
+    let screenHeight = window.screen.height;
     let cover = document.getElementById("screen-cover");
-    for (let i = 0; i < 2000; i++) {
+    for (let i = 0; i < screenHeight; i++) {
         setTimeout(function() {
-            cover.style.top = i;
+            cover.style.height = screenHeight - i;
             console.log(i);
-        }, i*2);
+        }, i*4);
     }
 });

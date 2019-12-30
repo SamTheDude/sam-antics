@@ -15,7 +15,7 @@
     <meta charset="utf-8">
 
     <!-- SVG to hide site till it loads -->
-    <svg id="screen-cover" width="100%" height="100%" style="position:absolute;z-index:1;">
+    <svg id="screen-cover" width="100%" height="100%" style="position:absolute;z-index:1;bottom:0px;">
         <rect width="100%" height="100%" style="fill:rgb(0,0,0);" />
     </svg>
 
