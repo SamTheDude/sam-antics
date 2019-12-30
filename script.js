@@ -40,13 +40,6 @@ function getDir(x, y, lastDirection){
 
 //Function to control a single line's movement
 function lineMove(lineID, segments, headLocation, segment, lastDirection, colour, fastItterations){
-    //Set time period.
-    let time = 300;
-    if(fastItterations > 0){
-        time = 10;
-        fastItterations = fastItterations - 1;
-    }
-
     //Get a random direction to move in.
     let direction = getDir(headLocation[0], headLocation[1], lastDirection);
 
@@ -54,8 +47,18 @@ function lineMove(lineID, segments, headLocation, segment, lastDirection, colour
         headLocation = [Math.round(window.screen.width/2), Math.round(window.screen.height/2)];
     }
 
+    //Work out screen width
+    let screenWidth = window.screen.width;
+
+    //Set time period.
+    let time = 300 + screenWidth/5;
+    if(fastItterations > 0){
+        time = 30;
+        fastItterations = fastItterations - 1;
+    }
+
     //Get a randomised distance.
-    let distance = Math.round(Math.random()*60)+40;
+    let distance = Math.round(Math.random()*(0.1*screenWidth))+(0.05*screenWidth);
 
     //Get the current line segment.
     let lineSegment = document.getElementById(lineID + ":" + segment);
@@ -161,7 +164,8 @@ function backgroundAnimate(concurrentLines, segments) {
 //Wait for document to load
 document.addEventListener("DOMContentLoaded", function(){
     //===== Start up the background animation. =====
-    backgroundAnimate(10, 10);
+    //Work out how many lines are needed.
+    backgroundAnimate(20, 10);
 
     //===== Reveals the screen underneath      =====
     //===== once the site is finished loading. =====

@@ -26,30 +26,39 @@
 
 <!-- All the displayed HTML is in here -->
 
+<svg id="animation-dump" width="100%" height="100%">
+    <line x1="0" y1="0" x2="0" y2="0" class="line"/>
+</svg>
+
 <body>
     <header>
         Sam Antics
     </header>
 
     <main>
-        <section>
-            About Me
-        </section>
-        <section>
-            University Work
-        </section>
-        <section>
-            Personal Projects
-        </section>
+        <div class="float">
+            <section>
+                About Me
+            </section>
+        </div>
+        <div class="float">
+            <section>
+                University Work
+            </section>
+        </div>
+        <div class="float">
+            <section>
+                Personal Projects
+            </section>
+        </div>
+        <div class="unfloat">
+            <!-- To float left so other bits don't -->
+        </div>
     </main>
 
     <footer>
         
     </footer>
 </body>
-
-<svg id="animation-dump" width="100%" height="100%">
-    <line x1="0" y1="0" x2="0" y2="0" class="line"/>
-</svg>
 
 </html>

@@ -56,8 +56,14 @@ svg line.line{
 =============================
 */
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 400px) {
+    header{
+        padding: 25% 0px 25% 0px;
+    }
 
+    main section{
+        padding: 6%;
+    }
 }
 
 /*
@@ -67,5 +73,22 @@ svg line.line{
 */
 
 @media only screen and (min-width: 800px) {
+    header{
+        padding: 14%;
+    }
 
+    main div.float{
+        width: 33%;
+        height: auto;
+        float: left;
+        margin: auto;
+    }
+
+    main div.unfloat{
+        float: none;
+    }
+
+    main section{
+        padding: 10%;
+    }
 }
