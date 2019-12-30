@@ -161,12 +161,8 @@ function backgroundAnimate(concurrentLines, segments) {
     }
 }
 
-//Wait for document to load
-document.addEventListener("DOMContentLoaded", function(){
-    //===== Start up the background animation. =====
-    //Work out how many lines are needed.
-    backgroundAnimate(20, 10);
-
+//Function to reveal screen.
+function showScreen(){
     //===== Reveals the screen underneath      =====
     //===== once the site is finished loading. =====
     //Get the height of the screen
@@ -182,4 +178,30 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         }, i);
     }
+}
+
+//Function to Hide screen.
+function hideScreen(){
+    //Get the height of the screen
+    let screenHeight = window.screen.height;
+    //Get the screen cover as an object.
+    let cover = document.getElementById("screen-cover");
+    //Show the cover.
+    cover.style.display = "fixed";
+    //Grow the screen cover over time.
+    for (let i = 0; i < screenHeight; i++) {
+        setTimeout(function() {
+            cover.style.height = i;
+        }, i);
+    }
+}
+
+//Wait for document to load
+document.addEventListener("DOMContentLoaded", function(){
+    //===== Start up the background animation. =====
+    //Work out how many lines are needed.
+    backgroundAnimate(20, 10);
+
+    //Shows screen
+    showScreen();
 });

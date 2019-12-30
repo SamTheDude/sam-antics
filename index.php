@@ -21,7 +21,9 @@
 
     <!-- Link to the stylesheet and javascript. -->
     <link rel="stylesheet" href="/styles.css">
-    <script type="text/javascript" src="/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/animation-script.js"></script>
+    <script type="text/javascript" src="/page-load-script.js"></script>
 </head>
 
 <!-- All the displayed HTML is in here -->
@@ -35,19 +37,23 @@
         Sam Antics
     </header>
 
+    <div id="site-dump">
+        <!-- The contents of loaded sites are dumped here. -->
+    </div>
+
     <main>
         <div class="float">
-            <section>
+            <section id="about-me">
                 About Me
             </section>
         </div>
         <div class="float">
-            <section>
+            <section id="university-work">
                 University Work
             </section>
         </div>
         <div class="float">
-            <section>
+            <section id="personal-projects">
                 Personal Projects
             </section>
         </div>

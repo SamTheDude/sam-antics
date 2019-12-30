@@ -39,7 +39,7 @@ main section:hover{
 
 /* Styling for the SVG */
 svg#animation-dump{
-    position: absolute;
+    position: fixed;
     top: 0px;
     z-index: -1;
 }
@@ -48,6 +48,15 @@ svg line.line{
     stroke:rgb(255,0,0);
     stroke-width:1;
 
+}
+
+div#site-dump{
+    display: inline;
+}
+
+main#about-me section{
+    font-size: medium;
+    padding: 2%;
 }
 
 /*
