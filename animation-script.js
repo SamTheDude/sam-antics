@@ -162,11 +162,11 @@ function backgroundAnimate(concurrentLines, segments) {
 }
 
 //Function to reveal screen.
-function showScreen(){
+function showScreen(top){
     //===== Reveals the screen underneath      =====
     //===== once the site is finished loading. =====
     //Get the height of the screen
-    let screenHeight = window.screen.height;
+    let screenHeight = window.screen.height - top;
     //Get the screen cover as an object.
     let cover = document.getElementById("screen-cover");
     //Shrink the screen cover over time.
@@ -181,13 +181,13 @@ function showScreen(){
 }
 
 //Function to Hide screen.
-function hideScreen(){
+function hideScreen(top){
     //Get the height of the screen
-    let screenHeight = window.screen.height;
+    let screenHeight = window.screen.height - top;
     //Get the screen cover as an object.
     let cover = document.getElementById("screen-cover");
     //Show the cover.
-    cover.style.display = "fixed";
+    cover.style.display = "inline";
     //Grow the screen cover over time.
     for (let i = 0; i < screenHeight; i++) {
         setTimeout(function() {
@@ -203,5 +203,5 @@ document.addEventListener("DOMContentLoaded", function(){
     backgroundAnimate(20, 10);
 
     //Shows screen
-    showScreen();
+    showScreen(0);
 });

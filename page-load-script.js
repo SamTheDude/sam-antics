@@ -1,8 +1,6 @@
 //Use strict javascript.
 "use-strict";
 
-//Function to do the writing animation.
-
 //Moves the header to the top left corner
 function cornerHeader(time, tick){
     //Get the header as an object.
@@ -54,12 +52,60 @@ function cornerHeader(time, tick){
 
 //Loads a page requested in.
 function loadPage(pageAddress){
+    let topGap;
+
     cornerHeader(1000, 20);
+
+    setTimeout(function() {
+        //Get the header as an object.
+        let header = document.getElementsByTagName("header")[0];    
+
+        //Get top gap
+        topGap = header.offsetHeight;
+
+        hideScreen(topGap);
+    }, 300);
     
     setTimeout(function() {
         //Put all the elements of the site into the dump.
         $("#site-dump").load(pageAddress);
     }, 1100);
+
+    setTimeout(function() {
+        //Show the screen.
+        showScreen(topGap);
+    }, 1400);
+}
+
+//Unload the page
+function unload(){
+    //Get the header as an object.
+    let header = document.getElementsByTagName("header")[0];  
+
+    hideScreen(0);
+
+    setTimeout(function() {
+        header.style.padding = null;
+        header.style.position = "static";
+        header.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+
+        //remove contents of the div.
+        let siteDump = document.getElementById("site-dump");
+
+        //Set div contents to nothing.
+        siteDump.innerHTML = "";
+
+        //Get the main area as an object.
+        let main = document.getElementsByTagName("main")[0];
+
+        //Show the main area.
+        main.style.display = "inline";
+    }, 1000);
+
+    setTimeout(function() {
+        //Show the screen.
+        showScreen(0);
+    }, 1400);
 }
 
 //Wait for document to load
@@ -67,7 +113,8 @@ document.addEventListener("DOMContentLoaded", function(){
     //Get the buttons as objects.
     let aboutMe = document.getElementById("about-me"),
     universityWork = document.getElementById("university-work"),
-    personalProjects = document.getElementById("personal-projects");
+    personalProjects = document.getElementById("personal-projects"),
+    title = document.getElementsByTagName("header")[0];
 
     aboutMe.addEventListener("click", function(){
         loadPage("/about-me.html");
@@ -79,5 +126,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
     personalProjects.addEventListener("click", function(){
         loadPage("/personal-projects.html");
+    });
+
+    title.addEventListener("click", function(){
+        unload();
     });
 });
