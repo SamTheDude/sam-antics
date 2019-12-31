@@ -60,6 +60,12 @@ function lineMove(lineID, segments, headLocation, segment, lastDirection, colour
     //Get a randomised distance.
     let distance = Math.round(Math.random()*(0.1*screenWidth))+(0.05*screenWidth);
 
+    //Expemplify vertical movement
+    if((direction[1] != 0) && (direction[0] == 0) && (window.screen.height > window.screen.width)){
+        distance * 2;
+    }
+
+
     //Get the current line segment.
     let lineSegment = document.getElementById(lineID + ":" + segment);
 
@@ -201,7 +207,7 @@ function hideScreen(top){
 document.addEventListener("DOMContentLoaded", function(){
     //===== Start up the background animation. =====
     //Work out how many lines are needed.
-    backgroundAnimate(20, 20);
+    backgroundAnimate(15, 30);
 
     //Shows screen
     showScreen(0);
