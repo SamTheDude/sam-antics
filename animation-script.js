@@ -132,9 +132,10 @@ function randomColour() {
     var red = Math.round(Math.random() * 255);
     var green = Math.round(Math.random() * 255);
     var blue = Math.round(Math.random() * 255);
+    var alpha = Math.round(Math.random() * 255);
 
     //concatinate the colour code.
-    var colourCode = "rgb(" + red + ", " + green + ", " + blue + ")";
+    var colourCode = "rgba(" + red + ", " + green + ", " + blue + ", " + alpha + ")";
 
     //return the colour code.
     return colourCode;
@@ -157,7 +158,7 @@ function backgroundAnimate(concurrentLines, segments) {
     animationDump.innerHTML = concatinatedText;
 
     for (let i = 0; i < concurrentLines; i++) {
-        lineMove(i, segments, [Math.round(window.screen.width/2), Math.round(window.screen.height/2)], 0, [0, 0], randomColour(), 8);
+        lineMove(i, segments, [Math.round(window.screen.width/2), Math.round(window.screen.height/2)], 0, [0, 0], randomColour(), 0);
     }
 }
 
@@ -200,7 +201,7 @@ function hideScreen(top){
 document.addEventListener("DOMContentLoaded", function(){
     //===== Start up the background animation. =====
     //Work out how many lines are needed.
-    backgroundAnimate(20, 10);
+    backgroundAnimate(20, 20);
 
     //Shows screen
     showScreen(0);

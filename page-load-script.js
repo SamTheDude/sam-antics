@@ -17,6 +17,9 @@ function cornerHeader(time, tick){
     headerx = Math.round(headerx - header.offsetWidth/2);
     headery = Math.round(headery - header.offsetHeight/2);
 
+    header.style.padding = "none";
+    header.style.position = "static";
+
     //Find the point at which to callback
     let calbackPoint = tick * Math.floor(time/tick);
 
@@ -25,10 +28,11 @@ function cornerHeader(time, tick){
         setTimeout(function() {
             //Calculate the ratio of the change
             let ratio = 1 - (i / time);
-
+            
             //Position the header in the correct place.
             header.style.left = headerx;
             header.style.top = headery * ratio;
+            header.style.position = "absolute";
 
             //reset to relative.
             if(i == calbackPoint){
@@ -62,6 +66,7 @@ function loadPage(pageAddress){
 
         //Get top gap
         topGap = header.offsetHeight;
+        console.log(topGap);
 
         hideScreen(topGap);
     }, 300);
@@ -69,7 +74,7 @@ function loadPage(pageAddress){
     setTimeout(function() {
         //Put all the elements of the site into the dump.
         $("#site-dump").load(pageAddress);
-    }, 1100);
+    }, 1350);
 
     setTimeout(function() {
         //Show the screen.
@@ -100,12 +105,12 @@ function unload(){
 
         //Show the main area.
         main.style.display = "inline";
-    }, 1000);
+    }, 1200);
 
     setTimeout(function() {
         //Show the screen.
         showScreen(0);
-    }, 1400);
+    }, 1300);
 }
 
 //Wait for document to load
