@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <!--
+        Site written by Samuel Kent as a personal site.
+        Started on the 29th December 2019.
+        (Unfinished)
+    -->
+
+    <!-- Tab title and icon. -->
+    <title>Sam Antics</title>
+    <link rel="icon" href="Images/icon.png">
+
+    <!-- Meta Information for the site. -->
+    <meta name="author" content="Samuel Kent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<!-- All the displayed HTML is in here -->
+<body>
+    <main id="contact">
+        <form name="contact-form" action="/mail.php" method="post">
+            <!-- Set up the form with the hidden variables -->
+
+            <!-- ===== Fields and Lables ===== -->
+            <p>
+                <span class="form-input-label">
+                    Email
+                </span>
+                <span class="form-input-description">
+                    Used for following up with updates
+                    on anything that you report or just
+                    to reply to a question.
+                </span>
+                <input type="email" name="email" placeholder="Put your email here..." />
+            </p>
+            <p>
+                <span class="form-input-label">
+                    Subject
+                </span>
+                <span class="form-input-description">
+                    Describe why you wanted to get in contact. Take a challege and do it in one word if you can.
+                </span>
+                <input type="text" name="title" placeholder="Put title here..." />
+            </p>
+            <p>
+                <span class="form-input-label">
+                    Comments/Feedback
+                </span>
+                <span class="form-input-description">
+                    Elaborate as much as you can, I'll be in contact if you ask for a reply within 1-5 days, usually under 12 hrs.
+                </span>
+                <textarea name="comments" placeholder="Put your comments here..." rows="5" cols="50"></textarea>
+            </p>
+
+            <!-- ===== Submit Button ===== -->
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+
+</html>

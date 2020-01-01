@@ -57,6 +57,23 @@ div#site-dump{
 main#about-me section{
     font-size: medium;
     padding: 2%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+main#about-me img{
+    margin: auto;
+    width: 60%;
+    border-radius: 50%;
+}
+
+main#university-work section{
+    font-size: medium;
+    padding: 2%;
+}
+
+main#personal-projects section{
+    font-size: medium;
+    padding: 2%;
 }
 
 /*
@@ -72,6 +89,14 @@ main#about-me section{
 
     main section{
         padding: 6%;
+    }
+
+    main#about-me section{
+        padding: 4%;
+    }
+    
+    main#about-me img{
+        width: 15%;
     }
 }
 
@@ -99,5 +124,13 @@ main#about-me section{
 
     main section{
         padding: 10%;
+    }
+
+    main#about-me section{
+        padding: 8%;
+    }
+    
+    main#about-me img{
+        width: 25%;
     }
 }

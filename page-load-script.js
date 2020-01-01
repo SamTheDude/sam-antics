@@ -66,7 +66,6 @@ function loadPage(pageAddress){
 
         //Get top gap
         topGap = header.offsetHeight;
-        console.log(topGap);
 
         hideScreen(topGap);
     }, 300);
@@ -74,6 +73,7 @@ function loadPage(pageAddress){
     setTimeout(function() {
         //Put all the elements of the site into the dump.
         $("#site-dump").load(pageAddress);
+        console.log("Hi");
     }, 1350);
 
     setTimeout(function() {
@@ -113,6 +113,26 @@ function unload(){
     }, 1300);
 }
 
+//Assign the click event to all the objects with the correct id.
+function checkLink(page, done){
+    contact = document.getElementById(page);
+
+    if((contact != null)){
+        if(done == false){
+            contact.addEventListener("click", function(){
+                loadPage("/" + page + ".html");
+            });
+            done = true;
+        }
+    }else{
+        done = false;
+    }
+
+    setTimeout(function() {
+        checkLink(page, done);
+    }, 100);
+}
+
 //Wait for document to load
 document.addEventListener("DOMContentLoaded", function(){
     //Get the buttons as objects.
@@ -136,4 +156,6 @@ document.addEventListener("DOMContentLoaded", function(){
     title.addEventListener("click", function(){
         unload();
     });
+
+    checkLink("contact", false);
 });
