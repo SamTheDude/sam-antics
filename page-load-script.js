@@ -141,6 +141,10 @@ document.addEventListener("DOMContentLoaded", function(){
     personalProjects = document.getElementById("personal-projects"),
     title = document.getElementsByTagName("header")[0];
 
+    title.addEventListener("click", function(){
+        unload();
+    });
+
     aboutMe.addEventListener("click", function(){
         loadPage("/about-me.html");
     });
@@ -151,10 +155,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     personalProjects.addEventListener("click", function(){
         loadPage("/personal-projects.html");
-    });
-
-    title.addEventListener("click", function(){
-        unload();
     });
 
     checkLink("contact", false);

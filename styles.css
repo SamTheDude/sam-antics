@@ -76,6 +76,37 @@ main#personal-projects section{
     padding: 2%;
 }
 
+main#contact form p{
+    margin: 4%;
+}
+
+main#contact form span.form-input-label{
+    font-size: medium;
+    display: block;
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0px;
+}
+
+main#contact form span.form-input-description{
+    font-size: small;
+    color: rgba(255, 255, 255, 0.685);
+    display: block;
+    padding: 2%;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+main#contact form .input{
+    font-size: small;
+    color: rgba(255, 255, 255, 0.685);
+    display: block;
+    width: 100%;
+    padding: 2%;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /*
 =============================
 ===== Tablet CSS Styles =====
@@ -97,6 +128,18 @@ main#personal-projects section{
     
     main#about-me img{
         width: 15%;
+    }
+
+    main#contact form span.form-input-label{
+        font-size: 0.7em;
+    }
+    
+    main#contact form span.form-input-description{
+        font-size: 0.7em;
+    }
+    
+    main#contact form .input{
+        font-size: 0.7em;
     }
 }
 
@@ -132,5 +175,22 @@ main#personal-projects section{
     
     main#about-me img{
         width: 25%;
+    }
+
+    main#contact form{
+        margin: auto;
+        max-width: 1000px;
+    }
+
+    main#contact form span.form-input-label{
+        font-size: 0.8em;
+    }
+    
+    main#contact form span.form-input-description{
+        font-size: 0.8em;
+    }
+    
+    main#contact form .input{
+        font-size: 0.8em;
     }
 }

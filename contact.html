@@ -23,6 +23,9 @@
 <!-- All the displayed HTML is in here -->
 <body>
     <main id="contact">
+        <section>
+            EMAIL SERVER NOT ACTIVE AT THE MOMENT, THIS WILL NOT SEND AN EMAIL!
+        </section>
         <form name="contact-form" action="/mail.php" method="post">
             <!-- Set up the form with the hidden variables -->
 
@@ -36,7 +39,7 @@
                     on anything that you report or just
                     to reply to a question.
                 </span>
-                <input type="email" name="email" placeholder="Put your email here..." />
+                <input class="input" type="email" name="email" placeholder="Put your email here..." />
             </p>
             <p>
                 <span class="form-input-label">
@@ -45,7 +48,7 @@
                 <span class="form-input-description">
                     Describe why you wanted to get in contact. Take a challege and do it in one word if you can.
                 </span>
-                <input type="text" name="title" placeholder="Put title here..." />
+                <input class="input" type="text" name="title" placeholder="Put title here..." />
             </p>
             <p>
                 <span class="form-input-label">
@@ -54,7 +57,7 @@
                 <span class="form-input-description">
                     Elaborate as much as you can, I'll be in contact if you ask for a reply within 1-5 days, usually under 12 hrs.
                 </span>
-                <textarea name="comments" placeholder="Put your comments here..." rows="5" cols="50"></textarea>
+                <textarea class="input" name="comments" placeholder="Put your comments here..." rows="5" cols="50"></textarea>
             </p>
 
             <!-- ===== Submit Button ===== -->

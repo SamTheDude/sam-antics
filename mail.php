@@ -48,7 +48,7 @@ mail($to, $subject, $message, $headers);
 </svg>
 
 <body>
-    <header>
+    <header onclick="window.location.href = '/index.php';">
         Sam Antics
     </header>
 
@@ -58,8 +58,24 @@ mail($to, $subject, $message, $headers);
 
     <main>
         <section>
-
+            Your message has been sent, I usually respond within 12 hours though please allow up to 5 days.
         </section>
+
+        <div class="float">
+            <span id="about-me">
+            </span>
+        </div>
+        <div class="float">
+            <span id="university-work">
+            </span>
+        </div>
+        <div class="float">
+            <span id="personal-projects">
+            </span>
+        </div>
+        <div class="unfloat">
+            <!-- To float left so other bits don't -->
+        </div>
     </main>
 
     <footer>
