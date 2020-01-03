@@ -102,9 +102,23 @@ main#contact form .input{
     color: rgba(255, 255, 255, 0.685);
     display: block;
     width: 100%;
-    padding: 2%;
-    margin: 0px;
+    padding: 1%;
+    margin: 2%;
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.button {
+    border: 0px;
+    padding: 4%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    font-size: 1.2em;
+    color: white;
+    transition: linear 100ms;
+}
+
+.button:hover{
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 /*
