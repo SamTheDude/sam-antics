@@ -114,13 +114,13 @@ function unload(){
 }
 
 //Assign the click event to all the objects with the correct id.
-function checkLink(page, done){
+function checkLink(page, pageLink, done){
     contact = document.getElementById(page);
 
     if((contact != null)){
         if(done == false){
             contact.addEventListener("click", function(){
-                loadPage("/" + page + ".html");
+                loadPage(pageLink);
             });
             done = true;
         }
@@ -157,5 +157,5 @@ document.addEventListener("DOMContentLoaded", function(){
         loadPage("/personal-projects.html");
     });
 
-    checkLink("contact", false);
+    checkLink("contact", "/contact.html",false);
 });
