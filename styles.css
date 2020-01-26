@@ -57,7 +57,7 @@ div#site-dump{
 main#about-me section{
     font-size: medium;
     padding: 2%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 main#about-me img{
@@ -69,11 +69,22 @@ main#about-me img{
 main#university-work section{
     font-size: medium;
     padding: 2%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+main#university-work section:hover{
+    background-color: rgba(50, 50, 50, 0.7);
 }
 
 main#personal-projects section{
     font-size: medium;
     padding: 2%;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8em;
+}
+
+main#personal-projects section:hover{
+    background-color: rgba(50, 50, 50, 0.7);
 }
 
 main#contact form p{
